@@ -70,28 +70,7 @@ npm run dev
 The app will run locally at [http://localhost:5173](http://localhost:5173).
 
 <br/>
-
-## 📂 Project Structure
-
-```
-src/
-│
-├── components/
-│   ├── DocumentList/         # Left panel - list and manage documents
-│   ├── Editor/               # Markdown editor and live preview
-│   └── Toolbar/              # Toolbar for editor actions (bold, italic, etc.)
-│
-├── store/
-│   ├── documentsSlice.ts     # Redux slice for documents state
-│   └── store.ts              # Redux store configuration
-│
-├── types/                    # TypeScript types and interfaces
-├── utils/                    # Helper functions
-└── App.tsx                   # Main application component
-```
-
 <br/>
-
 ## 🤝 Acknowledgments
 
 - Built as part of the [Cimba](https://cimba.ai/) Frontend Hackathon Challenge.
