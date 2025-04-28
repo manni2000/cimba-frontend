@@ -69,8 +69,6 @@ npm run dev
 
 The app will run locally at [http://localhost:5173](http://localhost:5173).
 
-<br/>
-<br/>
 ## 🤝 Acknowledgments
 
 - Built as part of the [Cimba](https://cimba.ai/) Frontend Hackathon Challenge.
