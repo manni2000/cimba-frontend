@@ -13,24 +13,23 @@ const Editor: React.FC<EditorProps> = ({ document }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [content, setContent] = useState(document.content);
 
-  // Keep local state in sync with document changes
   useEffect(() => {
     setContent(document.content);
-  }, [document.content]);
+  }, [document.id]);
 
   return (
     <div className="flex flex-col h-full bg-white dark:bg-gray-900 shadow-md rounded-md overflow-hidden">
       <div className="border-b dark:border-gray-700 p-4">
         <DocumentTitle id={document.id} title={document.title} />
       </div>
-      
+
       <EditorToolbar
         documentId={document.id}
         textareaRef={textareaRef}
         content={content}
         setContent={setContent}
       />
-      
+
       <div className="flex flex-col md:flex-row flex-1 min-h-0">
         <div className="flex-1 border-b md:border-b-0 md:border-r dark:border-gray-700 min-h-[300px] md:min-h-0">
           <MarkdownEditor
