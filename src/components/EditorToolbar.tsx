@@ -44,10 +44,8 @@ const EditorToolbar: React.FC<EditorToolbarProps> = ({
       content.substring(0, start) +
       replacement +
       content.substring(end);
-
     setContent(newContent);
 
-    // Set cursor position after update
     setTimeout(() => {
       textarea.focus();
       let newPosition = start + before.length;
