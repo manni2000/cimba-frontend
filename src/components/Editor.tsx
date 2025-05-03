@@ -13,13 +13,15 @@ const Editor: React.FC<EditorProps> = ({ document }) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const [content, setContent] = useState(document.content);
 
-  // Keep local state in sync with document changes
   useEffect(() => {
     setContent(document.content);
   }, [document.content]);
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-gray-900 shadow-md rounded-md overflow-hidden">
+    <div
+      id="editor-container"
+      className="flex flex-col h-full bg-white dark:bg-gray-900 shadow-md rounded-md overflow-hidden"
+    >
       <div className="border-b dark:border-gray-700 p-4">
         <DocumentTitle id={document.id} title={document.title} />
       </div>

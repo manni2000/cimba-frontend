@@ -26,7 +26,7 @@ const SearchBar: React.FC = () => {
         value={searchTerm}
         onChange={handleChange}
         placeholder="Search documents..."
-        className="block w-full pl-10 pr-10 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:text-white dark:focus:ring-blue-600 dark:focus:border-blue-600"
+        className="block w-full pl-10 pr-10 py-2 text-sm border border-gray-300 dark:border-gray-700 rounded-none bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:text-white dark:focus:ring-blue-600 dark:focus:border-blue-600"
       />
       {searchTerm && (
         <button

@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
           <h2 className="text-lg font-bold dark:text-white">Documents</h2>
           <button
             onClick={handleCreateDocument}
-            className="p-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-200 flex items-center justify-center"
+            className="p-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-none transition-colors duration-200 flex items-center justify-center"
             aria-label="Create new document"
           >
             <FilePlus className="h-5 w-5" />
