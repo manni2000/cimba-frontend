@@ -191,6 +191,8 @@ const EditorToolbar: React.FC<EditorToolbarProps> = ({
           Export .md
         </button>
 
+        <span className="inline-block w-2" />
+
         <button
           onClick={previewFullScreen}
           className="py-1 px-3 text-sm bg-blue-500 hover:bg-blue-600 text-white rounded-none transition-colors duration-200"
@@ -226,4 +228,3 @@ const ToolbarButton: React.FC<ToolbarButtonProps> = ({
 };
 
 export default EditorToolbar;
-
