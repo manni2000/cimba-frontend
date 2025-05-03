@@ -20,7 +20,7 @@ const MarkdownEditor: React.FC<MarkdownEditorProps> = ({
   const dispatch = useDispatch();
   const debouncedContent = useDebounce(content, 500);
 
-  // Update textarea value directly when document changes
+
   useEffect(() => {
     if (textareaRef.current) {
       textareaRef.current.value = content;
@@ -31,7 +31,7 @@ const MarkdownEditor: React.FC<MarkdownEditorProps> = ({
     setContent(e.target.value);
   };
 
-  // Save to Redux (and localStorage) when debounced content changes
+
   useEffect(() => {
     if (debouncedContent !== document.content) {
       dispatch(updateDocument({ id: document.id, content: debouncedContent }));
@@ -41,6 +41,7 @@ const MarkdownEditor: React.FC<MarkdownEditorProps> = ({
   return (
     <div className="h-full">
       <textarea
+        key={document.id}
         ref={textareaRef}
         value={content}
         onChange={handleContentChange}

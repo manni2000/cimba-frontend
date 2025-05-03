@@ -43,7 +43,7 @@ const DocumentList: React.FC = () => {
         >
           <div className="flex items-center space-x-2 overflow-hidden">
             <FileText className="h-5 w-5 text-blue-500 dark:text-blue-400 flex-shrink-0" />
-            <span className="font-medium truncate">{document.title}</span>
+            <span className="font-medium truncate text-gray-900 dark:text-white">{document.title}</span>
           </div>
           <button
             onClick={(e) => handleDeleteDocument(e, document.id)}
